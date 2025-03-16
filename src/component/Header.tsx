@@ -6,17 +6,26 @@ import { FaSearch } from "react-icons/fa";
 import { IoIosSettings, IoMdInformationCircleOutline } from "react-icons/io";
 import styles from "../assets/styles/Header.module.scss";
 import { NavLink } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../Redux/store";
+import { toggleVisibility } from "../Redux/slices/VisibilitySlice";
 
 const Header: React.FC = () => {
+  const inVisible = useSelector((state:RootState) => state.visibility.inVisible);
+  const dispatch = useDispatch();
   return (
     <div className={styles.Header}>
+      
       <div className={styles['button-list']}>
         <NavLink to="/" className={({isActive}) => isActive ? styles['button-active']  : styles.button}>
           <CgProfile />
         </NavLink>
-        <NavLink to="/chats"  className={({isActive}) => isActive ? styles['button-active']  : styles.button}>
-          <PiChatsTeardropBold />
-        </NavLink>
+        <button
+          className={inVisible  ? styles['button-active'] : styles.button}
+          onClick={() => dispatch(toggleVisibility())}
+        >
+         <PiChatsTeardropBold />
+        </button>
         <NavLink to="/add-photo"  className={({isActive}) => isActive ? styles['button-active']  : styles.button}>
           <MdAddAPhoto />
         </NavLink>

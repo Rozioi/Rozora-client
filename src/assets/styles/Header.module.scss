@@ -8,9 +8,14 @@ $active-color: #969696;
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
+  background-color: transparent;
+  outline: none;
   text-decoration: none;
   transition: color 0.3s ease;
   padding: 10px;
+  border: none; 
+  cursor: pointer; 
+  box-shadow: none; 
 }
 
 .Header {
