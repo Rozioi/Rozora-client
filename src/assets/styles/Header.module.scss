@@ -1,0 +1,49 @@
+$bg-color: #313131;
+$opacity: 0.5;
+$icon-color: #5A5A5A; 
+$hover-color: #888888; 
+$active-color: #969696; 
+@mixin navLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 10px;
+}
+
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 18px;
+  background: rgba(red($bg-color), green($bg-color), blue($bg-color), $opacity);
+  z-index: 10;
+
+  .button-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+    .button {
+      color: $icon-color;
+      @include navLink;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+    .button-active {
+      @include navLink;
+      color: $active-color;
+    }
+  }
+}
