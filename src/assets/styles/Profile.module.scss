@@ -1,0 +1,91 @@
+
+.profileContainer {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .backgroundWrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .backgroundImage {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .backgroundImageImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatarWrapper {
+    position: absolute;
+    bottom: -50px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    border: 5px solid #3D3C3C; 
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .avatarImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .userInfo {
+    margin-top: 70px; 
+  }
+  
+  .userName {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  
+  
+
+  
+  
+  .editButton,
+  .messageButton {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .editButton {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .editButton:hover {
+    background-color: #0056b3;
+  }
+  
+  .messageButton {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .messageButton:hover {
+    background-color: #1e7e34;
+  }

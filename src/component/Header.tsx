@@ -17,7 +17,7 @@ const Header: React.FC = () => {
     <div className={styles.Header}>
       
       <div className={styles['button-list']}>
-        <NavLink to="/" className={({isActive}) => isActive ? styles['button-active']  : styles.button}>
+        <NavLink to="/profile" className={({isActive}) => isActive ? styles['button-active']  : styles.button}>
           <CgProfile />
         </NavLink>
         <button
