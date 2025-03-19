@@ -11,13 +11,14 @@ import { RootState } from "../Redux/store";
 import { toggleVisibility } from "../Redux/slices/VisibilitySlice";
 
 const Header: React.FC = () => {
+  
   const inVisible = useSelector((state:RootState) => state.visibility.inVisible);
   const dispatch = useDispatch();
   return (
     <div className={styles.Header}>
       
       <div className={styles['button-list']}>
-        <NavLink to="/profile" className={({isActive}) => isActive ? styles['button-active']  : styles.button}>
+        <NavLink to="/profile/Rozioi" className={({isActive}) => isActive ? styles['button-active']  : styles.button}>
           <CgProfile />
         </NavLink>
         <button

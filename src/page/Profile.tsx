@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styles from "../assets/styles/Profile.module.scss";
+import { useParams } from "react-router-dom";
 
 const Profile: React.FC = () => {
   const [isOwnProfile, setIsOwnProfile] = useState<boolean | null>(null);
   const bio = "Люблю программировать и изучать новые технологии.";
   const dateOfBirth = "15.08.1995";
-
+  const occupation = "Web Developer | Full-stack | JavaScript";
+  const {username} = useParams<string>();
   useEffect(() => {
-    const currentUserId = "123";
-    const profileId = "123"; 
-
-    setIsOwnProfile(currentUserId === profileId);
   }, []);
 
   return (
@@ -35,19 +33,21 @@ const Profile: React.FC = () => {
 
       <div className={styles.userInfo}>
         <p className={styles.userName}>
-          {isOwnProfile ? "Rozioi" : "Другой пользователь"}
+          {username}
         </p>
 
         <div className={styles.infoCard}>
           <div className={styles.infoItem}>
-
-            <p className={styles.infoText}>{bio}</p>
+            <p className={styles.occupation}>{occupation}</p>
           </div>
           <div className={styles.infoItem}>
+            <p className={styles.infoText}>{bio}</p>
+          </div>
+          {/* <div className={styles.infoItem}>
             <p className={styles.infoText}>
              {dateOfBirth}
             </p>
-          </div>
+          </div> */}
         </div>
 
         {isOwnProfile ? (
