@@ -6,25 +6,32 @@
     padding: 20px;
     box-sizing: border-box;
     text-align: center;
+    height: 82vh;
+    box-shadow: 0 10px 22px rgba(37, 37, 37, 0.5);
+    
   }
   
   .backgroundWrapper {
+    filter: drop-shadow(0 10px 22px rgb(32, 32, 32));
     position: relative;
     width: 100%;
     height: 200px;
     border-radius: 10px;
     margin-bottom: 20px;
+    
   }
 
   .backgroundImage {
     width: 100%;
     height: 100%;
+    
   }
   
   .backgroundImageImg {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 22px;
   }
   
   .avatarWrapper {
@@ -58,6 +65,31 @@
   }
   
   
+  .infoCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  .infoItem {
+    padding: 5px 0;
+  }
+  
+  .occupation {
+    font-size: 22px;
+    font-weight: 600;
+    color: #bdbdbd; // Мягкий тёмно-серый
+  }
+  
+  .infoText {
+    font-size: 18px;
+    color: #e0e0e0; // Светло-серый
+    opacity: 0.8;
+  }
   
 
   
